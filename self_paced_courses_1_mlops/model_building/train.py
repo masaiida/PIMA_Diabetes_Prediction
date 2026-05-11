@@ -67,8 +67,7 @@ grid_search.fit(Xtrain, ytrain)
 
 # Best model
 best_model = grid_search.best_estimator_
-print("Best Params:
-", grid_search.best_params_)
+print("Best Params:\n", grid_search.best_params_)
 
 # Predict on training set
 y_pred_train = best_model.predict(Xtrain)
@@ -77,12 +76,10 @@ y_pred_train = best_model.predict(Xtrain)
 y_pred_test = best_model.predict(Xtest)
 
 # Evaluation
-print("
-Training Classification Report:")
+print("\nTraining Classification Report:")
 print(classification_report(ytrain, y_pred_train))
 
-print("
-Test Classification Report:")
+print("\nTest Classification Report:")
 print(classification_report(ytest, y_pred_test))
 
 # Save best model
