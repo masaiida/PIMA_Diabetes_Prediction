@@ -7,7 +7,7 @@ api = HfApi(token=os.getenv("HF_TOKEN"))
 api.create_repo(
         repo_id="masaiida/PIMA-Diabetes-Prediction",
         repo_type="space",
-        space_sdk="streamlit",
+        space_sdk="docker",
         exist_ok=True,
 )
 
